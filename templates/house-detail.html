@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+          integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link rel="stylesheet" href="styles/styles.css" type="text/css"/>
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+            integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+            crossorigin="anonymous"></script>
+    <script src="scripts/scripts.js"></script>
+    <title>House Detail</title>
+</head>
+<body>
+<!-- Top nav bar -->
+<div class="top-bar w-100">
+
+    <nav class="navbar navbar-expand-lg navbar-light bg-light border-bottom border-dark">
+        <div class="container">
+
+            <div class="d-flex justify-content-between w-100">
+
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                        data-bs-target="#navbarMainFunct" aria-controls="navbarMainFunct" aria-expanded="false"
+                        aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+
+                <a class="navbar-brand" href="#">Realtors_icon</a>
+
+                <div class="collapse navbar-collapse" id="navbarMainFunct">
+                    <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                        <!--                        Buy session-->
+                        <li class="nav-item">
+                            <a class="nav-link hover-underline-animation" href="#" id="navbarDropdown"
+                               role="button"
+                               data-bs-toggle="dropdown" aria-expanded="false">
+                                Buy
+                            </a>
+                            <ul class="dropdown-menu w-100" aria-labelledby="navbarDropdown">
+                                <div class="container">
+                                    <div class="row">
+                                        <div class="col">
+                                            <li><a class="dropdown-item">Buy homepage</a></li>
+                                        </div>
+                                        <div class="col">
+                                            <li><h5 class="dropdown-header fs-6 fw-bolder fs-6 fw-bolder">Homes for
+                                                Sale</h5></li>
+                                            <li><a class="dropdown-item" href="#">BaoLoc Homes For Sale</a></li>
+                                            <li><a class="dropdown-item" href="#">BaoLoc New Home Communities</a></li>
+                                            <li><a class="dropdown-item" href="#">BaoLoc New Construction and Plans</a>
+                                            </li>
+                                            <li><a class="dropdown-item" href="#">BaoLoc Foreclosures</a></li>
+                                            <li><a class="dropdown-item" href="#">BaoLoc Open Houses</a></li>
+                                        </div>
+                                        <div class="col">
+                                            <li><h5 class="dropdown-header fs-6 fw-bolder">Homes Values</h5></li>
+                                            <li><a class="dropdown-item" href="#">BaoLoc Housing Market</a></li>
+                                            <li><a class="dropdown-item" href="#">BaoLoc Recently Sold</a></li>
+                                            <li><a class="dropdown-item" href="#">BaoLoc Property Records</a></li>
+                                            <li>
+                                                <hr class="dropdown-divider">
+                                            </li>
+                                            <li><a class="dropdown-item" href="#">Home Buying Tips</a></li>
+                                            <li><a class="dropdown-item" href="#">Home Selling Tips</a></li>
+                                        </div>
+                                        <div class="col">
+                                            <li><a class="dropdown-item" href="#">My Home</a></li>
+                                            <li><a class="dropdown-item" href="#">News & Insights</a></li>
+                                            <li>
+                                                <hr class="dropdown-divider">
+                                            </li>
+                                            <li><a class="dropdown-item" href="#">Something else here</a></li>
+                                        </div>
+                                    </div>
+                                </div>
+                            </ul>
+                        </li>
+
+                        <li class="nav-item">
+                            <a class="nav-link hover-underline-animation" styeles="color: white" href="#">Sell</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link hover-underline-animation" href="#">Rent</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link hover-underline-animation" href="#">Mortgage</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link hover-underline-animation text-nowrap" href="#">Find Realtors</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link hover-underline-animation text-nowrap" href="#">My home</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link hover-underline-animation text-nowrap" href="#">News & Insights</a>
+                        </li>
+
+                        <!--                        Adverise session-->
+                        <div class="flex-row-reverse h-100">
+                            <button class="btn btn-outline-secondary btn-sm me-5 text-nowrap" href="#">Adervise</button>
+                        </div>
+                    </ul>
+                </div>
+
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                        data-bs-target="#navbarLogin" aria-controls="navbarLogin" aria-expanded="false"
+                        aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+
+                <div class="collapse navbar-collapse flex-row-reverse" id="navbarLogin">
+
+                    <!--                Login session-->
+                    <div class="dropdown p-1 hover-underline-animation text-center">
+                        <div role="button"
+                             id="dropdownMenuLink_2"
+                             data-bs-toggle="dropdown" aria-expanded="false">
+                            <img src="https://img.icons8.com/ios/25/000000/user-male-circle.png"/>
+                        </div>
+
+                        <ul class="dropdown-menu" aria-labelledby="dropdownMenuLink_2">
+                            <li><a class="dropdown-item" href="#">Action</a></li>
+                            <li><a class="dropdown-item" href="#">Another action</a></li>
+                            <li><a class="dropdown-item" href="#">Something else here</a></li>
+                        </ul>
+                    </div>
+
+                    <!--                Favorite session-->
+                    <div class="dropdown me-2 p-1 hover-underline-animation text-center">
+                        <div class="w-100" href="#" role="button" id="dropdownMenuLink"
+                             data-bs-toggle="dropdown" aria-expanded="false">
+                            <img class="mx-auto" src="https://img.icons8.com/windows/25/000000/like--v1.png"/>
+                        </div>
+
+                        <ul class="dropdown-menu" aria-labelledby="dropdownMenuLink">
+                            <li><a class="dropdown-item" href="#">Action</a></li>
+                            <li><a class="dropdown-item" href="#">Another action</a></li>
+                            <li><a class="dropdown-item" href="#">Something else here</a></li>
+                        </ul>
+                    </div>
+
+
+                </div>
+            </div>
+
+        </div>
+    </nav>
+
+</div>
+</body>
+</html>

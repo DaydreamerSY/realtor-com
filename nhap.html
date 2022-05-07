@@ -1,0 +1,367 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+          integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link rel="stylesheet" href="styles/styles.css" type="text/css"/>
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+            integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+            crossorigin="anonymous"></script>
+    <script src="scripts/scripts.js"></script>
+    <title>Nháp</title>
+</head>
+
+<body>
+<!-- Top nav bar -->
+<div class="top-bar w-100">
+
+    <nav class="navbar navbar-expand-lg navbar-light bg-light border-bottom border-dark">
+        <div class="container">
+
+            <div class="d-flex justify-content-between w-100">
+
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                        data-bs-target="#navbarMainFunct" aria-controls="navbarMainFunct" aria-expanded="false"
+                        aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+
+                <a class="navbar-brand" href="#">Realtors_icon</a>
+
+                <div class="collapse navbar-collapse" id="navbarMainFunct">
+                    <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                        <!--                        Buy session-->
+                        <li class="nav-item">
+                            <a class="nav-link hover-underline-animation" href="#" id="navbarDropdown"
+                               role="button"
+                               data-bs-toggle="dropdown" aria-expanded="false">
+                                Buy
+                            </a>
+                            <ul class="dropdown-menu w-100" aria-labelledby="navbarDropdown">
+                                <div class="container">
+                                    <div class="row">
+                                        <div class="col">
+                                            <li><a class="dropdown-item">Buy homepage</a></li>
+                                        </div>
+                                        <div class="col">
+                                            <li><h5 class="dropdown-header">Homes for Sale</h5></li>
+                                            <li><a class="dropdown-item" href="#">BaoLoc Homes For Sale</a></li>
+                                            <li><a class="dropdown-item" href="#">BaoLoc New Home Communities</a></li>
+                                            <li><a class="dropdown-item" href="#">BaoLoc New Construction and Plans</a>
+                                            </li>
+                                            <li><a class="dropdown-item" href="#">BaoLoc Foreclosures</a></li>
+                                            <li><a class="dropdown-item" href="#">BaoLoc Open Houses</a></li>
+                                        </div>
+                                        <div class="col">
+                                            <li><h5 class="dropdown-header">Homes Values</h5></li>
+                                            <li><a class="dropdown-item" href="#">BaoLoc Housing Market</a></li>
+                                            <li><a class="dropdown-item" href="#">BaoLoc Recently Sold</a></li>
+                                            <li><a class="dropdown-item" href="#">BaoLoc Property Records</a></li>
+                                            <li>
+                                                <hr class="dropdown-divider">
+                                            </li>
+                                            <li><a class="dropdown-item" href="#">Home Buying Tips</a></li>
+                                            <li><a class="dropdown-item" href="#">Home Selling Tips</a></li>
+                                        </div>
+                                        <div class="col">
+                                            <li><a class="dropdown-item" href="#">My Home</a></li>
+                                            <li><a class="dropdown-item" href="#">News & Insights</a></li>
+                                            <li>
+                                                <hr class="dropdown-divider">
+                                            </li>
+                                            <li><a class="dropdown-item" href="#">Something else here</a></li>
+                                        </div>
+                                    </div>
+                                </div>
+                            </ul>
+                        </li>
+
+                        <li class="nav-item">
+                            <a class="nav-link hover-underline-animation" styeles="color: white" href="#">Sell</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link hover-underline-animation" href="#">Rent</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link hover-underline-animation" href="#">Mortgage</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link hover-underline-animation text-nowrap" href="#">Find Realtors</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link hover-underline-animation text-nowrap" href="#">My home</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link hover-underline-animation text-nowrap" href="#">News & Insights</a>
+                        </li>
+
+                        <!--                        Adverise session-->
+                        <div class="flex-row-reverse h-100">
+                            <button class="btn btn-outline-secondary btn-sm me-5 text-nowrap" href="#">Adervise</button>
+                        </div>
+                    </ul>
+                </div>
+
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                        data-bs-target="#navbarLogin" aria-controls="navbarLogin" aria-expanded="false"
+                        aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+
+                <div class="collapse navbar-collapse flex-row-reverse" id="navbarLogin">
+
+                    <!--                Login session-->
+                    <div class="dropdown p-1 hover-underline-animation text-center">
+                        <div role="button"
+                             id="dropdownMenuLink_2"
+                             data-bs-toggle="dropdown" aria-expanded="false">
+                            <img src="https://img.icons8.com/ios/25/000000/user-male-circle.png"/>
+                        </div>
+
+                        <ul class="dropdown-menu" aria-labelledby="dropdownMenuLink_2">
+                            <li><a class="dropdown-item" href="#">Action</a></li>
+                            <li><a class="dropdown-item" href="#">Another action</a></li>
+                            <li><a class="dropdown-item" href="#">Something else here</a></li>
+                        </ul>
+                    </div>
+
+                    <!--                Favorite session-->
+                    <div class="dropdown me-2 p-1 hover-underline-animation text-center">
+                        <div class="w-100" href="#" role="button" id="dropdownMenuLink"
+                             data-bs-toggle="dropdown" aria-expanded="false">
+                            <img class="mx-auto" src="https://img.icons8.com/windows/25/000000/like--v1.png"/>
+                        </div>
+
+                        <ul class="dropdown-menu" aria-labelledby="dropdownMenuLink">
+                            <li><a class="dropdown-item" href="#">Action</a></li>
+                            <li><a class="dropdown-item" href="#">Another action</a></li>
+                            <li><a class="dropdown-item" href="#">Something else here</a></li>
+                        </ul>
+                    </div>
+
+
+                </div>
+            </div>
+
+        </div>
+    </nav>
+
+</div>
+
+<!--Search -->
+<div class="search-container w-100 d-flex align-items-center">
+
+    <div class="text-center mx-auto">
+        <div class="w-100 m-auto">
+            <p class="title-text">Discover your perfect home</p>
+            <p class="title-content-text">With the most complete source of homes for sale & real estate near you</p>
+            <div class="input-group mb-3">
+                <input type="text" class="form-control" placeholder="Bao Loc city, Loc Tien Sub-district"
+                       aria-label="Bao Loc city, Loc Tien Sub-district" aria-describedby="button-addon2">
+                <button class="btn btn-outline-danger bg-danger" type="button" id="button-addon2">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 25 25" width="25px" height="25px">
+                        <g id="surface286629">
+                            <path style=" stroke:none;fill-rule:nonzero;fill:rgb(92.54902%,94.117647%,94.509804%);fill-opacity:1;"
+                                  d="M 10.5 1.5 C 5.808594 1.5 2 5.308594 2 10 C 2 14.691406 5.808594 18.5 10.5 18.5 C 12.355469 18.5 14.070312 17.902344 15.46875 16.890625 L 22.046875 23.453125 L 23.453125 22.046875 L 16.953125 15.53125 C 18.230469 14.042969 19 12.113281 19 10 C 19 5.308594 15.191406 1.5 10.5 1.5 Z M 10.5 2.5 C 14.648438 2.5 18 5.851562 18 10 C 18 14.148438 14.648438 17.5 10.5 17.5 C 6.351562 17.5 3 14.148438 3 10 C 3 5.851562 6.351562 2.5 10.5 2.5 Z M 10.5 2.5 "/>
+                        </g>
+                    </svg>
+                </button>
+            </div>
+        </div>
+    </div>
+
+</div>
+
+<!--First content - Recommend post-->
+<div class="container mt-5">
+
+    <div class="container text-center my-3">
+        <h2 class="font-weight-light">Bootstrap Multi Slide Carousel</h2>
+        <div class="row mx-auto my-auto justify-content-center">
+            <div id="recipeCarousel" class="carousel slide" data-bs-ride="carousel">
+                <div class="carousel-inner" role="listbox">
+                    <div class="carousel-item active">
+                        <div class="col-md-3">
+                            <div class="card" style="width: 18rem;">
+                                <img class="img-fluid" src="./styles/images/backgroud-search.jpg" class="card-img-top"
+                                     alt="...">
+                                <div class="card-body">
+                                    <h5 class="card-title">Card title</h5>
+                                    <p class="card-text">Some quick example text to build on the card title and make up
+                                        the bulk of
+                                        the card's
+                                        content.</p>
+                                    <a href="#" class="btn btn-primary">Go somewhere</a>
+                                </div>
+                                <div class="card-footer">
+                                    <small class="text-muted">Last updated 3 mins ago</small>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="carousel-item">
+                        <div class="col-md-3">
+                            <div class="card" style="width: 18rem;">
+                                <img class="img-fluid" src="./styles/images/backgroud-search.jpg" class="card-img-top"
+                                     alt="...">
+                                <div class="card-body">
+                                    <h5 class="card-title">Card title</h5>
+                                    <p class="card-text">Some quick example text to build on the card title and make up
+                                        the bulk of
+                                        the card's
+                                        content.</p>
+                                    <a href="#" class="btn btn-primary">Go somewhere</a>
+                                </div>
+                                <div class="card-footer">
+                                    <small class="text-muted">Last updated 3 mins ago</small>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="carousel-item">
+                        <div class="col-md-3">
+                            <div class="card" style="width: 18rem;">
+                                <img class="img-fluid" src="./styles/images/backgroud-search.jpg" class="card-img-top"
+                                     alt="...">
+                                <div class="card-body">
+                                    <h5 class="card-title">Card title</h5>
+                                    <p class="card-text">Some quick example text to build on the card title and make up
+                                        the bulk of
+                                        the card's
+                                        content.</p>
+                                    <a href="#" class="btn btn-primary">Go somewhere</a>
+                                </div>
+                                <div class="card-footer">
+                                    <small class="text-muted">Last updated 3 mins ago</small>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="carousel-item">
+                        <div class="col-md-3">
+                            <div class="card" style="width: 18rem;">
+                                <img class="img-fluid" src="./styles/images/backgroud-search.jpg" class="card-img-top"
+                                     alt="...">
+                                <div class="card-body">
+                                    <h5 class="card-title">Card title</h5>
+                                    <p class="card-text">Some quick example text to build on the card title and make up
+                                        the bulk of
+                                        the card's
+                                        content.</p>
+                                    <a href="#" class="btn btn-primary">Go somewhere</a>
+                                </div>
+                                <div class="card-footer">
+                                    <small class="text-muted">Last updated 3 mins ago</small>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="carousel-item">
+                        <div class="col-md-3">
+                            <div class="card" style="width: 18rem;">
+                                <img class="img-fluid" src="./styles/images/backgroud-search.jpg" class="card-img-top"
+                                     alt="...">
+                                <div class="card-body">
+                                    <h5 class="card-title">Card title</h5>
+                                    <p class="card-text">Some quick example text to build on the card title and make up
+                                        the bulk of
+                                        the card's
+                                        content.</p>
+                                    <a href="#" class="btn btn-primary">Go somewhere</a>
+                                </div>
+                                <div class="card-footer">
+                                    <small class="text-muted">Last updated 3 mins ago</small>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="carousel-item">
+                        <div class="col-md-3">
+                            <div class="card" style="width: 18rem;">
+                                <img class="img-fluid" src="./styles/images/backgroud-search.jpg" class="card-img-top"
+                                     alt="...">
+                                <div class="card-body">
+                                    <h5 class="card-title">Card title</h5>
+                                    <p class="card-text">Some quick example text to build on the card title and make up
+                                        the bulk of
+                                        the card's
+                                        content.</p>
+                                    <a href="#" class="btn btn-primary">Go somewhere</a>
+                                </div>
+                                <div class="card-footer">
+                                    <small class="text-muted">Last updated 3 mins ago</small>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <a class="carousel-control-prev bg-transparent w-aut" href="#recipeCarousel" role="button"
+                   data-bs-slide="prev">
+                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                </a>
+                <a class="carousel-control-next bg-transparent w-aut" href="#recipeCarousel" role="button"
+                   data-bs-slide="next">
+                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                </a>
+            </div>
+        </div>
+        <h5 class="mt-2 fw-light">advances one slide at a time</h5>
+    </div>
+
+</div>
+</div>
+
+
+<p>This is xample text 1</p>
+<p>This is xample text</p>
+<p>This is xample text</p>
+<p>This is xample text</p>
+<p>This is xample text</p>
+<p>This is xample text</p>
+<p>This is xample text</p>
+<p>This is xample text</p>
+<p>This is xample text</p>
+<p>This is xample text</p>
+<p>This is xample text</p>
+<p>This is xample text</p>
+<p>This is xample text</p>
+<p>This is xample text</p>
+<p>This is xample text</p>
+<p>This is xample text</p>
+<p>This is xample text</p>
+<p>This is xample text</p>
+<p>This is xample text</p>
+<p>This is xample text</p>
+<p>This is xample text</p>
+<p>This is xample text</p>
+<p>This is xample text</p>
+<p>This is xample text</p>
+<p>This is xample text</p>
+<p>This is xample text</p>
+<p>This is xample text</p>
+<p>This is xample text</p>
+<p>This is xample text</p>
+<p>This is xample text</p>
+<p>This is xample text</p>
+<p>This is xample text</p>
+<p>This is xample text</p>
+<p>This is xample text</p>
+<p>This is xample text</p>
+<p>This is xample text</p>
+<p>This is xample text</p>
+<p>This is xample text</p>
+<p>This is xample text</p>
+<p>This is xample text</p>
+<p>This is xample text</p>
+<p>This is xample text</p>
+</div>
+
+
+</body>
+
+</html>

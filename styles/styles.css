@@ -1,0 +1,107 @@
+.bg-custom {
+    color: grey;
+}
+
+.bg-custom-2 {
+    color: red;
+    background-color: gainsboro;
+}
+
+.rounded-pill {
+    color: black;
+    border: 1px solid;
+}
+
+.selected {
+
+}
+
+.hover-underline-animation {
+    display: inline-block;
+    position: relative;
+    color: #f65f5f;
+}
+
+.hover-underline-animation:after {
+    content: '';
+    position: absolute;
+    width: 100%;
+    transform: scaleX(0);
+    height: 3px;
+    bottom: 0;
+    left: 0;
+    background-color: #f65f5f;
+    transform-origin: bottom;
+    transition: transform 0.25s ease-out;
+}
+
+.hover-underline-animation:hover:after {
+    transform: scaleX(1);
+    transform-origin: bottom;
+}
+
+.search-container {
+    background-image: url("./images/backgroud-search.jpg");
+    height: 700px;
+    width: 100%;
+    /*background-attachment: fixed;*/
+    background-size: cover;
+    color: white;
+}
+
+.outer {
+    display: block;
+    margin: auto;
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    width: 50%;
+}
+
+.inner {
+    text-align: justify;
+    width: 100%;
+}
+
+.title-text {
+    font-size: 70px;
+    font-weight: bold;
+}
+
+.title-content-text {
+    font-size: 25px;
+}
+
+.row-title {
+    font-size: 25px;
+    font-weight: bold;
+}
+
+.card:hover {
+    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+    transition: 0.3s;
+}
+
+.timer {
+    display: inline-block;
+    float: left;
+    position: absolute;
+    background-color: #3668b1;
+    color: white;
+    /*border: 1px solid white;*/
+    border-radius: 5px;
+    left: 10px;
+    top: 10px;
+    padding-left: 3px;
+    padding-right: 3px;
+    font-weight: bold;
+}
+
+
+
+
+
+
+
