@@ -1,3 +1,4 @@
+/*index session*/
 .bg-custom {
     color: grey;
 }
@@ -98,10 +99,18 @@
     padding-right: 3px;
     font-weight: bold;
 }
+/*index session end*/
 
+/*footer session*/
 
+/*footer session end*/
 
+/*detail session*/
 
+/*detail session end*/
 
-
-
+/*avatar session*/
+.card a:hover {
+    color: #c2c6c6 !important;
+}
+/*avatar session end*/
