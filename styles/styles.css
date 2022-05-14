@@ -99,6 +99,24 @@
     padding-right: 3px;
     font-weight: bold;
 }
+
+.tag-address {
+
+    background-color: #3fb058;
+    color: white;
+    /*border: 1px solid white;*/
+    border-radius: 5px;
+    left: 10px;
+    top: 10px;
+    padding-left: 3px;
+    padding-right: 3px;
+    width: fit-content;
+    /*font-weight: bold;*/
+}
+
+.tag-address:hover {
+    color: white;
+}
 /*index session end*/
 
 /*footer session*/
