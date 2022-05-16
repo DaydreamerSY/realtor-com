@@ -1,5 +1,6 @@
 import pandas as pd
 import joblib
+import json
 from sklearn.preprocessing import MinMaxScaler
 from scipy.spatial.distance import cdist
 
@@ -17,8 +18,8 @@ class Recommender:
         scipy==1.8.0
 
     Input/Attributes:
-        user_data <- pandas.DataFrame() : User's last visited post.
-        database <- pandas.DataFrame() : DataFrame of all posts.
+        user_data <- dict/json : User's last visited post.
+        database <- dict/json : DataFrame of all posts.
         cal_cols <- list: List of columns will be calculate in class.
         based_on <- string: Name of column that will be filtered, first priority
             to sort, should be "region".
@@ -32,7 +33,7 @@ class Recommender:
 
     Output/Methods:
         get_recommended():
-            recommened_posts <- pandas.DataFrame(): Contains recommended posts similar
+            recommened_posts <- dict/json: Contains recommended posts similar
             to user_data.
 
     Algorithm:
@@ -59,8 +60,8 @@ class Recommender:
         database:
         """
         self.scaler = scaler
-        self.user_last_visited = user_data.copy()
-        self.database = database.copy()
+        self.user_last_visited = pd.DataFrame(user_data)
+        self.database = pd.DataFrame(database)
         self.cal_cols = cal_cols
         self.based_on = based_on
         self.sort_by = sort_by
@@ -128,33 +129,28 @@ class Recommender:
         return recommended_posts
 
 
-# if __name__ == "__main__":
-#     database = pd.read_csv("data.csv")
+if __name__ == "__main__":
 
-#     user_last_visited = pd.DataFrame(
-#         {
-#             "id": [90],
-#             "region": ["Bảo Lâm"],
-#             "area_by_m2": [90],
-#             "width_of_facade": [5],
-#             "width_of_road": [5],
-#             "is_legal": [0],
-#             "price": [2],
-#         }
-#     )
+    database = pd.read_json("json/fake-data.json", orient="id")
+    # print(database)
+    user_last_visited = pd.read_json("json/user-data.json")
+    # print(user_last_visited)
 
-#     scaler = joblib.load("MinMaxScalerModel.gz")
-#     cal_cols = ["area_by_m2", "width_of_facade", "width_of_road", "is_legal", "price"]
-#     based_on = ["id"]
+    scaler = joblib.load("MinMaxScalerModel.gz")
+    cal_cols = ["area_by_m2", "width_of_facade", "width_of_road", "is_legal", "price"]
+    based_on = ["id"]
 
-#     recommender = Recommender(
-#         user_data=user_last_visited,
-#         database=database,
-#         cal_cols=cal_cols,
-#         based_on="region",
-#         sort_by="id",
-#         scaler=scaler,
-#         top=5,
-#     )
+    recommender = Recommender(
+        user_data=user_last_visited,
+        database=database,
+        cal_cols=cal_cols,
+        based_on="region",
+        sort_by="id",
+        scaler=scaler,
+        top=5,
+    )
 
-#     print(recommender.get_recommended())
+    recommended_posts = recommender.get_recommended()
+    print(recommended_posts)
+    recommended_posts.to_json("json/recommended-posts.json", orient="records")
+
