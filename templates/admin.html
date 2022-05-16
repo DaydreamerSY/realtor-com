@@ -2,9 +2,475 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>$Title$</title>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+          integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link rel="stylesheet" href="../styles/styles.css" type="text/css"/>
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+            integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+            crossorigin="anonymous"></script>
+    <script src="../scripts/scripts.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.7.2/Chart.js"></script>
+    <title>Admin</title>
 </head>
-<body>
-$END$
+<body class="body-admin">
+
+<!--<div class="container-fluid h-100 bg-custom">-->
+<!--    <div class="row h-100">-->
+<!--        <div class="col-lg-2 h-100 bg-custom-2">-->
+<!--            f-->
+<!--        </div>-->
+
+<!--        <div class="col-lg-10 h-100 bg-custom-3">Admin</div>-->
+<!--    </div>-->
+<!--</div>-->
+
+<div class="container-fluid h-100">
+    <div class="row h-100 w-100">
+        <!--Side bar session-->
+        <div class="col-lg-2 sidebar bg-dark">
+            <div class="text-white bg-dark h-100 w-100" style="width: 100%;">
+                <a href="/"
+                   class="d-flex align-items-center mb-3 mb-md-0 me-md-auto text-white text-decoration-none">
+                    <span class="fs-4">Sidebar</span>
+                </a>
+                <hr>
+                <ul class="nav nav-pills flex-column mb-auto">
+                    <li class="nav-item">
+                        <a href="#" class="nav-link active" aria-current="page">
+                            <svg class="bi me-2" width="16" height="16">
+                                <use xlink:href="#home"/>
+                            </svg>
+                            Home
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#" class="nav-link text-white">
+                            <svg class="bi me-2" width="16" height="16">
+                                <use xlink:href="#speedometer2"/>
+                            </svg>
+                            Dashboard
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#" class="nav-link text-white">
+                            <svg class="bi me-2" width="16" height="16">
+                                <use xlink:href="#table"/>
+                            </svg>
+                            Orders
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#" class="nav-link text-white">
+                            <svg class="bi me-2" width="16" height="16">
+                                <use xlink:href="#grid"/>
+                            </svg>
+                            Products
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#" class="nav-link text-white">
+                            <svg class="bi me-2" width="16" height="16">
+                                <use xlink:href="#people-circle"/>
+                            </svg>
+                            Customers
+                        </a>
+                    </li>
+                </ul>
+                <hr>
+                <div class="dropdown">
+                    <a href="#"
+                       class="d-flex align-items-center text-white text-decoration-none dropdown-toggle"
+                       id="dropdownUser1" data-bs-toggle="dropdown" aria-expanded="false">
+                        <img src="https://github.com/mdo.png" alt="" width="32" height="32"
+                             class="rounded-circle me-2">
+                        <strong>mdo</strong>
+                    </a>
+                    <ul class="dropdown-menu dropdown-menu-dark text-small shadow"
+                        aria-labelledby="dropdownUser1">
+                        <li><a class="dropdown-item" href="#">New project...</a></li>
+                        <li><a class="dropdown-item" href="#">Settings</a></li>
+                        <li><a class="dropdown-item" href="#">Profile</a></li>
+                        <li>
+                            <hr class="dropdown-divider">
+                        </li>
+                        <li><a class="dropdown-item" href="#">Sign out</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <!--Side bar session end-->
+
+        <!--        Info session-->
+        <div class="col-lg-10 info-content">
+            <!--        Weekly report-->
+            <div class="row">
+                <div class="col-lg-4">
+                    <div class="row h-50">
+                        <div class="col card-holder w-50">
+                            <div class="card mx-auto align-middle h-100 w-100">
+                                <div class="card-body">
+                                    <h5 class="card-title">Posts created</h5>
+                                    <h3>2,832</h3>
+                                    <p><span class="decrease-static">-3.65%</span> since last week</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col card-holder w-50">
+                            <div class="card mx-auto align-middle h-100 w-100">
+                                <div class="card-body">
+                                    <h5 class="card-title">Visitors</h5>
+
+                                    <h3>2,832</h3>
+                                    <p><span class="increase-static">+3.65%</span> since last week</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row h-50">
+                        <div class="col card-holder w-50">
+                            <div class="card mx-auto align-middle h-100 w-100">
+                                <div class="card-body">
+                                    <h5 class="card-title">Contacts</h5>
+
+                                    <h3>2,832</h3>
+                                    <p><span class="increase-static">+3.65%</span> since last week</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col card-holder w-50">
+                            <div class="card mx-auto align-middle h-100 w-100">
+                                <div class="card-body">
+                                    <h5 class="card-title">Reported posts</h5>
+
+                                    <h3>2,832</h3>
+                                    <p><span class="decrease-static">-3.65%</span> since last week</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-8 card-holder">
+                    <div class="card mx-auto align-middle h-100 w-100">
+                        <canvas id="total-chart"></canvas>
+                    </div>
+                </div>
+            </div>
+            <!--        Weekly report end-->
+
+            <!--        Calendar, location, something blabla-->
+            <div class="row">
+                <div class="col-lg-2 card-holder">
+                    <div class="card mx-auto align-middle w-100">
+                        <div class="card-body">
+                            <h5 class="card-title">Location</h5>
+                            <select class="form-select" aria-label="Default select example">
+                                <option selected>Default Location</option>
+                                <option value="1">Sài Gòn</option>
+                                <option value="2">Bảo Lộc</option>
+                                <option value="3">Lâm Đồng</option>
+                            </select>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-8 card-holder">
+                    <div class="card mx-auto align-middle h-100 w-100">
+                        <div class="card-body">
+                            <h5 class="card-title">Lastest posts</h5>
+                            <!-- Show 5 lastest post at selected location-->
+                            <ul class="list-group list-group-flush">
+                                <li class="list-group-item">
+                                    <div class="row">
+                                        <div class="col-lg-8">
+                                            <div class="row align-middle">
+                                                <a class="text-decoration-none">Đỗ Duy Linh</a>
+                                            </div>
+                                            <div class="row align-middle">
+                                                <a class="col-lg-12 text-decoration-none fs-4">
+                                                    <img src="https://img.icons8.com/ios/24/000000/address--v1.png"/>
+                                                    12A, Trần Phú, Lộc Tiến, Bảo Lộc, Lâm Đồng
+                                                </a>
+                                            </div>
+                                            <div class="row align-middle">
+                                                <div class="col-lg-2">
+                                                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"
+                                                         fill="currentColor"
+                                                         class="bi bi-cash" viewBox="0 0 16 16">
+                                                        <path d="M8 10a2 2 0 1 0 0-4 2 2 0 0 0 0 4z"/>
+                                                        <path d="M0 4a1 1 0 0 1 1-1h14a1 1 0 0 1 1 1v8a1 1 0 0 1-1 1H1a1 1 0 0 1-1-1V4zm3 0a2 2 0 0 1-2 2v4a2 2 0 0 1 2 2h10a2 2 0 0 1 2-2V6a2 2 0 0 1-2-2H3z"/>
+                                                    </svg>
+                                                    10 tỷ
+                                                </div>
+                                                <div class="col-lg-2">
+                                                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"
+                                                         fill="currentColor"
+                                                         class="bi bi-aspect-ratio" viewBox="0 0 16 16">
+                                                        <path d="M0 3.5A1.5 1.5 0 0 1 1.5 2h13A1.5 1.5 0 0 1 16 3.5v9a1.5 1.5 0 0 1-1.5 1.5h-13A1.5 1.5 0 0 1 0 12.5v-9zM1.5 3a.5.5 0 0 0-.5.5v9a.5.5 0 0 0 .5.5h13a.5.5 0 0 0 .5-.5v-9a.5.5 0 0 0-.5-.5h-13z"/>
+                                                        <path d="M2 4.5a.5.5 0 0 1 .5-.5h3a.5.5 0 0 1 0 1H3v2.5a.5.5 0 0 1-1 0v-3zm12 7a.5.5 0 0 1-.5.5h-3a.5.5 0 0 1 0-1H13V8.5a.5.5 0 0 1 1 0v3z"/>
+                                                    </svg>
+                                                    100 m<sup>2</sup>
+                                                </div>
+                                                <div class="col-lg-2">
+                                                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"
+                                                         fill="currentColor"
+                                                         class="bi bi-house-door" viewBox="0 0 16 16">
+                                                        <path d="M8.354 1.146a.5.5 0 0 0-.708 0l-6 6A.5.5 0 0 0 1.5 7.5v7a.5.5 0 0 0 .5.5h4.5a.5.5 0 0 0 .5-.5v-4h2v4a.5.5 0 0 0 .5.5H14a.5.5 0 0 0 .5-.5v-7a.5.5 0 0 0-.146-.354L13 5.793V2.5a.5.5 0 0 0-.5-.5h-1a.5.5 0 0 0-.5.5v1.293L8.354 1.146zM2.5 14V7.707l5.5-5.5 5.5 5.5V14H10v-4a.5.5 0 0 0-.5-.5h-3a.5.5 0 0 0-.5.5v4H2.5z"/>
+                                                    </svg>
+                                                    5 m<sup>2</sup>
+                                                </div>
+                                                <div class="col-lg-2">
+                                                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"
+                                                         fill="currentColor"
+                                                         class="bi bi-file-earmark-check" viewBox="0 0 16 16">
+                                                        <path d="M10.854 7.854a.5.5 0 0 0-.708-.708L7.5 9.793 6.354 8.646a.5.5 0 1 0-.708.708l1.5 1.5a.5.5 0 0 0 .708 0l3-3z"/>
+                                                        <path d="M14 14V4.5L9.5 0H4a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h8a2 2 0 0 0 2-2zM9.5 3A1.5 1.5 0 0 0 11 4.5h2V14a1 1 0 0 1-1 1H4a1 1 0 0 1-1-1V2a1 1 0 0 1 1-1h5.5v2z"/>
+                                                    </svg>
+                                                    Sổ đỏ
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </li>
+                                <li class="list-group-item">
+                                    <div class="row">
+                                        <div class="col-lg-8">
+                                            <div class="row align-middle">
+                                                <a class="text-decoration-none">Đỗ Duy Linh</a>
+                                            </div>
+                                            <div class="row align-middle">
+                                                <a class="col-lg-12 text-decoration-none fs-4">
+                                                    <img src="https://img.icons8.com/ios/24/000000/address--v1.png"/>
+                                                    12A, Trần Phú, Lộc Tiến, Bảo Lộc, Lâm Đồng
+                                                </a>
+                                            </div>
+                                            <div class="row align-middle">
+                                                <div class="col-lg-2">
+                                                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"
+                                                         fill="currentColor"
+                                                         class="bi bi-cash" viewBox="0 0 16 16">
+                                                        <path d="M8 10a2 2 0 1 0 0-4 2 2 0 0 0 0 4z"/>
+                                                        <path d="M0 4a1 1 0 0 1 1-1h14a1 1 0 0 1 1 1v8a1 1 0 0 1-1 1H1a1 1 0 0 1-1-1V4zm3 0a2 2 0 0 1-2 2v4a2 2 0 0 1 2 2h10a2 2 0 0 1 2-2V6a2 2 0 0 1-2-2H3z"/>
+                                                    </svg>
+                                                    10 tỷ
+                                                </div>
+                                                <div class="col-lg-2">
+                                                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"
+                                                         fill="currentColor"
+                                                         class="bi bi-aspect-ratio" viewBox="0 0 16 16">
+                                                        <path d="M0 3.5A1.5 1.5 0 0 1 1.5 2h13A1.5 1.5 0 0 1 16 3.5v9a1.5 1.5 0 0 1-1.5 1.5h-13A1.5 1.5 0 0 1 0 12.5v-9zM1.5 3a.5.5 0 0 0-.5.5v9a.5.5 0 0 0 .5.5h13a.5.5 0 0 0 .5-.5v-9a.5.5 0 0 0-.5-.5h-13z"/>
+                                                        <path d="M2 4.5a.5.5 0 0 1 .5-.5h3a.5.5 0 0 1 0 1H3v2.5a.5.5 0 0 1-1 0v-3zm12 7a.5.5 0 0 1-.5.5h-3a.5.5 0 0 1 0-1H13V8.5a.5.5 0 0 1 1 0v3z"/>
+                                                    </svg>
+                                                    100 m<sup>2</sup>
+                                                </div>
+                                                <div class="col-lg-2">
+                                                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"
+                                                         fill="currentColor"
+                                                         class="bi bi-house-door" viewBox="0 0 16 16">
+                                                        <path d="M8.354 1.146a.5.5 0 0 0-.708 0l-6 6A.5.5 0 0 0 1.5 7.5v7a.5.5 0 0 0 .5.5h4.5a.5.5 0 0 0 .5-.5v-4h2v4a.5.5 0 0 0 .5.5H14a.5.5 0 0 0 .5-.5v-7a.5.5 0 0 0-.146-.354L13 5.793V2.5a.5.5 0 0 0-.5-.5h-1a.5.5 0 0 0-.5.5v1.293L8.354 1.146zM2.5 14V7.707l5.5-5.5 5.5 5.5V14H10v-4a.5.5 0 0 0-.5-.5h-3a.5.5 0 0 0-.5.5v4H2.5z"/>
+                                                    </svg>
+                                                    5 m<sup>2</sup>
+                                                </div>
+                                                <div class="col-lg-2">
+                                                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"
+                                                         fill="currentColor"
+                                                         class="bi bi-file-earmark-check" viewBox="0 0 16 16">
+                                                        <path d="M10.854 7.854a.5.5 0 0 0-.708-.708L7.5 9.793 6.354 8.646a.5.5 0 1 0-.708.708l1.5 1.5a.5.5 0 0 0 .708 0l3-3z"/>
+                                                        <path d="M14 14V4.5L9.5 0H4a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h8a2 2 0 0 0 2-2zM9.5 3A1.5 1.5 0 0 0 11 4.5h2V14a1 1 0 0 1-1 1H4a1 1 0 0 1-1-1V2a1 1 0 0 1 1-1h5.5v2z"/>
+                                                    </svg>
+                                                    Sổ đỏ
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </li>
+                                <li class="list-group-item">
+                                    <div class="row">
+                                        <div class="col-lg-8">
+                                            <div class="row align-middle">
+                                                <a class="text-decoration-none">Đỗ Duy Linh</a>
+                                            </div>
+                                            <div class="row align-middle">
+                                                <a class="col-lg-12 text-decoration-none fs-4">
+                                                    <img src="https://img.icons8.com/ios/24/000000/address--v1.png"/>
+                                                    12A, Trần Phú, Lộc Tiến, Bảo Lộc, Lâm Đồng
+                                                </a>
+                                            </div>
+                                            <div class="row align-middle">
+                                                <div class="col-lg-2">
+                                                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"
+                                                         fill="currentColor"
+                                                         class="bi bi-cash" viewBox="0 0 16 16">
+                                                        <path d="M8 10a2 2 0 1 0 0-4 2 2 0 0 0 0 4z"/>
+                                                        <path d="M0 4a1 1 0 0 1 1-1h14a1 1 0 0 1 1 1v8a1 1 0 0 1-1 1H1a1 1 0 0 1-1-1V4zm3 0a2 2 0 0 1-2 2v4a2 2 0 0 1 2 2h10a2 2 0 0 1 2-2V6a2 2 0 0 1-2-2H3z"/>
+                                                    </svg>
+                                                    10 tỷ
+                                                </div>
+                                                <div class="col-lg-2">
+                                                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"
+                                                         fill="currentColor"
+                                                         class="bi bi-aspect-ratio" viewBox="0 0 16 16">
+                                                        <path d="M0 3.5A1.5 1.5 0 0 1 1.5 2h13A1.5 1.5 0 0 1 16 3.5v9a1.5 1.5 0 0 1-1.5 1.5h-13A1.5 1.5 0 0 1 0 12.5v-9zM1.5 3a.5.5 0 0 0-.5.5v9a.5.5 0 0 0 .5.5h13a.5.5 0 0 0 .5-.5v-9a.5.5 0 0 0-.5-.5h-13z"/>
+                                                        <path d="M2 4.5a.5.5 0 0 1 .5-.5h3a.5.5 0 0 1 0 1H3v2.5a.5.5 0 0 1-1 0v-3zm12 7a.5.5 0 0 1-.5.5h-3a.5.5 0 0 1 0-1H13V8.5a.5.5 0 0 1 1 0v3z"/>
+                                                    </svg>
+                                                    100 m<sup>2</sup>
+                                                </div>
+                                                <div class="col-lg-2">
+                                                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"
+                                                         fill="currentColor"
+                                                         class="bi bi-house-door" viewBox="0 0 16 16">
+                                                        <path d="M8.354 1.146a.5.5 0 0 0-.708 0l-6 6A.5.5 0 0 0 1.5 7.5v7a.5.5 0 0 0 .5.5h4.5a.5.5 0 0 0 .5-.5v-4h2v4a.5.5 0 0 0 .5.5H14a.5.5 0 0 0 .5-.5v-7a.5.5 0 0 0-.146-.354L13 5.793V2.5a.5.5 0 0 0-.5-.5h-1a.5.5 0 0 0-.5.5v1.293L8.354 1.146zM2.5 14V7.707l5.5-5.5 5.5 5.5V14H10v-4a.5.5 0 0 0-.5-.5h-3a.5.5 0 0 0-.5.5v4H2.5z"/>
+                                                    </svg>
+                                                    5 m<sup>2</sup>
+                                                </div>
+                                                <div class="col-lg-2">
+                                                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"
+                                                         fill="currentColor"
+                                                         class="bi bi-file-earmark-check" viewBox="0 0 16 16">
+                                                        <path d="M10.854 7.854a.5.5 0 0 0-.708-.708L7.5 9.793 6.354 8.646a.5.5 0 1 0-.708.708l1.5 1.5a.5.5 0 0 0 .708 0l3-3z"/>
+                                                        <path d="M14 14V4.5L9.5 0H4a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h8a2 2 0 0 0 2-2zM9.5 3A1.5 1.5 0 0 0 11 4.5h2V14a1 1 0 0 1-1 1H4a1 1 0 0 1-1-1V2a1 1 0 0 1 1-1h5.5v2z"/>
+                                                    </svg>
+                                                    Sổ đỏ
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </li>
+                                <li class="list-group-item">
+                                    <div class="row">
+                                        <div class="col-lg-8">
+                                            <div class="row align-middle">
+                                                <a class="text-decoration-none">Đỗ Duy Linh</a>
+                                            </div>
+                                            <div class="row align-middle">
+                                                <a class="col-lg-12 text-decoration-none fs-4">
+                                                    <img src="https://img.icons8.com/ios/24/000000/address--v1.png"/>
+                                                    12A, Trần Phú, Lộc Tiến, Bảo Lộc, Lâm Đồng
+                                                </a>
+                                            </div>
+                                            <div class="row align-middle">
+                                                <div class="col-lg-2">
+                                                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"
+                                                         fill="currentColor"
+                                                         class="bi bi-cash" viewBox="0 0 16 16">
+                                                        <path d="M8 10a2 2 0 1 0 0-4 2 2 0 0 0 0 4z"/>
+                                                        <path d="M0 4a1 1 0 0 1 1-1h14a1 1 0 0 1 1 1v8a1 1 0 0 1-1 1H1a1 1 0 0 1-1-1V4zm3 0a2 2 0 0 1-2 2v4a2 2 0 0 1 2 2h10a2 2 0 0 1 2-2V6a2 2 0 0 1-2-2H3z"/>
+                                                    </svg>
+                                                    10 tỷ
+                                                </div>
+                                                <div class="col-lg-2">
+                                                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"
+                                                         fill="currentColor"
+                                                         class="bi bi-aspect-ratio" viewBox="0 0 16 16">
+                                                        <path d="M0 3.5A1.5 1.5 0 0 1 1.5 2h13A1.5 1.5 0 0 1 16 3.5v9a1.5 1.5 0 0 1-1.5 1.5h-13A1.5 1.5 0 0 1 0 12.5v-9zM1.5 3a.5.5 0 0 0-.5.5v9a.5.5 0 0 0 .5.5h13a.5.5 0 0 0 .5-.5v-9a.5.5 0 0 0-.5-.5h-13z"/>
+                                                        <path d="M2 4.5a.5.5 0 0 1 .5-.5h3a.5.5 0 0 1 0 1H3v2.5a.5.5 0 0 1-1 0v-3zm12 7a.5.5 0 0 1-.5.5h-3a.5.5 0 0 1 0-1H13V8.5a.5.5 0 0 1 1 0v3z"/>
+                                                    </svg>
+                                                    100 m<sup>2</sup>
+                                                </div>
+                                                <div class="col-lg-2">
+                                                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"
+                                                         fill="currentColor"
+                                                         class="bi bi-house-door" viewBox="0 0 16 16">
+                                                        <path d="M8.354 1.146a.5.5 0 0 0-.708 0l-6 6A.5.5 0 0 0 1.5 7.5v7a.5.5 0 0 0 .5.5h4.5a.5.5 0 0 0 .5-.5v-4h2v4a.5.5 0 0 0 .5.5H14a.5.5 0 0 0 .5-.5v-7a.5.5 0 0 0-.146-.354L13 5.793V2.5a.5.5 0 0 0-.5-.5h-1a.5.5 0 0 0-.5.5v1.293L8.354 1.146zM2.5 14V7.707l5.5-5.5 5.5 5.5V14H10v-4a.5.5 0 0 0-.5-.5h-3a.5.5 0 0 0-.5.5v4H2.5z"/>
+                                                    </svg>
+                                                    5 m<sup>2</sup>
+                                                </div>
+                                                <div class="col-lg-2">
+                                                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"
+                                                         fill="currentColor"
+                                                         class="bi bi-file-earmark-check" viewBox="0 0 16 16">
+                                                        <path d="M10.854 7.854a.5.5 0 0 0-.708-.708L7.5 9.793 6.354 8.646a.5.5 0 1 0-.708.708l1.5 1.5a.5.5 0 0 0 .708 0l3-3z"/>
+                                                        <path d="M14 14V4.5L9.5 0H4a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h8a2 2 0 0 0 2-2zM9.5 3A1.5 1.5 0 0 0 11 4.5h2V14a1 1 0 0 1-1 1H4a1 1 0 0 1-1-1V2a1 1 0 0 1 1-1h5.5v2z"/>
+                                                    </svg>
+                                                    Sổ đỏ
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </li>
+                                <li class="list-group-item">
+                                    <div class="row">
+                                        <div class="col-lg-8">
+                                            <div class="row align-middle">
+                                                <a class="text-decoration-none">Đỗ Duy Linh</a>
+                                            </div>
+                                            <div class="row align-middle">
+                                                <a class="col-lg-12 text-decoration-none fs-4">
+                                                    <img src="https://img.icons8.com/ios/24/000000/address--v1.png"/>
+                                                    12A, Trần Phú, Lộc Tiến, Bảo Lộc, Lâm Đồng
+                                                </a>
+                                            </div>
+                                            <div class="row align-middle">
+                                                <div class="col-lg-2">
+                                                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"
+                                                         fill="currentColor"
+                                                         class="bi bi-cash" viewBox="0 0 16 16">
+                                                        <path d="M8 10a2 2 0 1 0 0-4 2 2 0 0 0 0 4z"/>
+                                                        <path d="M0 4a1 1 0 0 1 1-1h14a1 1 0 0 1 1 1v8a1 1 0 0 1-1 1H1a1 1 0 0 1-1-1V4zm3 0a2 2 0 0 1-2 2v4a2 2 0 0 1 2 2h10a2 2 0 0 1 2-2V6a2 2 0 0 1-2-2H3z"/>
+                                                    </svg>
+                                                    10 tỷ
+                                                </div>
+                                                <div class="col-lg-2">
+                                                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"
+                                                         fill="currentColor"
+                                                         class="bi bi-aspect-ratio" viewBox="0 0 16 16">
+                                                        <path d="M0 3.5A1.5 1.5 0 0 1 1.5 2h13A1.5 1.5 0 0 1 16 3.5v9a1.5 1.5 0 0 1-1.5 1.5h-13A1.5 1.5 0 0 1 0 12.5v-9zM1.5 3a.5.5 0 0 0-.5.5v9a.5.5 0 0 0 .5.5h13a.5.5 0 0 0 .5-.5v-9a.5.5 0 0 0-.5-.5h-13z"/>
+                                                        <path d="M2 4.5a.5.5 0 0 1 .5-.5h3a.5.5 0 0 1 0 1H3v2.5a.5.5 0 0 1-1 0v-3zm12 7a.5.5 0 0 1-.5.5h-3a.5.5 0 0 1 0-1H13V8.5a.5.5 0 0 1 1 0v3z"/>
+                                                    </svg>
+                                                    100 m<sup>2</sup>
+                                                </div>
+                                                <div class="col-lg-2">
+                                                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"
+                                                         fill="currentColor"
+                                                         class="bi bi-house-door" viewBox="0 0 16 16">
+                                                        <path d="M8.354 1.146a.5.5 0 0 0-.708 0l-6 6A.5.5 0 0 0 1.5 7.5v7a.5.5 0 0 0 .5.5h4.5a.5.5 0 0 0 .5-.5v-4h2v4a.5.5 0 0 0 .5.5H14a.5.5 0 0 0 .5-.5v-7a.5.5 0 0 0-.146-.354L13 5.793V2.5a.5.5 0 0 0-.5-.5h-1a.5.5 0 0 0-.5.5v1.293L8.354 1.146zM2.5 14V7.707l5.5-5.5 5.5 5.5V14H10v-4a.5.5 0 0 0-.5-.5h-3a.5.5 0 0 0-.5.5v4H2.5z"/>
+                                                    </svg>
+                                                    5 m<sup>2</sup>
+                                                </div>
+                                                <div class="col-lg-2">
+                                                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"
+                                                         fill="currentColor"
+                                                         class="bi bi-file-earmark-check" viewBox="0 0 16 16">
+                                                        <path d="M10.854 7.854a.5.5 0 0 0-.708-.708L7.5 9.793 6.354 8.646a.5.5 0 1 0-.708.708l1.5 1.5a.5.5 0 0 0 .708 0l3-3z"/>
+                                                        <path d="M14 14V4.5L9.5 0H4a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h8a2 2 0 0 0 2-2zM9.5 3A1.5 1.5 0 0 0 11 4.5h2V14a1 1 0 0 1-1 1H4a1 1 0 0 1-1-1V2a1 1 0 0 1 1-1h5.5v2z"/>
+                                                    </svg>
+                                                    Sổ đỏ
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-2 card-holder">
+                    <div class="card mx-auto align-middle w-100 justify-content-md-center">
+                        <canvas id="visit-chart" class="h-100"></canvas>
+                    </div>
+                </div>
+            </div>
+            <!--       Calendar, location, something blabla end-->
+
+            <!--        Recent, monthly post-->
+            <div class="row">
+                <div class="col-10">Latest post</div>
+                <div class="col-2">Monthly post chart</div>
+            </div>
+            <!--        Recent, monthly post end-->
+
+
+        </div>
+        <!--        Info session end-->
+
+    </div>
+
+</div>
+
+<script async defer
+        src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDs9i6wBv0bVwQSObBdUOXlMP9Dll02Dgs&callback=initMap"></script>
+
+
 </body>
 </html>
