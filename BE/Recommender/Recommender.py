@@ -129,28 +129,27 @@ class Recommender:
         return recommended_posts
 
 
-if __name__ == "__main__":
+# if __name__ == "__main__":
 
-    database = pd.read_json("json/fake-data.json", orient="id")
-    # print(database)
-    user_last_visited = pd.read_json("json/user-data.json")
-    # print(user_last_visited)
+#     database = pd.read_json("json/fake-data.json", orient="id")
+#     # print(database)
+#     user_last_visited = pd.read_json("json/user-data.json")
+#     # print(user_last_visited)
 
-    scaler = joblib.load("MinMaxScalerModel.gz")
-    cal_cols = ["area_by_m2", "width_of_facade", "width_of_road", "is_legal", "price"]
-    based_on = ["id"]
+#     scaler = joblib.load("MinMaxScalerModel.gz")
+#     cal_cols = ["area_by_m2", "width_of_facade", "width_of_road", "is_legal", "price"]
+#     based_on = ["id"]
 
-    recommender = Recommender(
-        user_data=user_last_visited,
-        database=database,
-        cal_cols=cal_cols,
-        based_on="region",
-        sort_by="id",
-        scaler=scaler,
-        top=5,
-    )
+#     recommender = Recommender(
+#         user_data=user_last_visited,
+#         database=database,
+#         cal_cols=cal_cols,
+#         based_on="region",
+#         sort_by="id",
+#         scaler=scaler,
+#         top=5,
+#     )
 
-    recommended_posts = recommender.get_recommended()
-    print(recommended_posts)
-    recommended_posts.to_json("json/recommended-posts.json", orient="records")
-
+#     recommended_posts = recommender.get_recommended()
+#     print(recommended_posts)
+#     recommended_posts.to_json("json/recommended-posts.json", orient="records")
