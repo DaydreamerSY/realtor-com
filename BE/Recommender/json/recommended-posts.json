@@ -1,0 +1,47 @@
+[
+  {
+    "id": 21,
+    "region": "B\u1ea3o L\u00e2m",
+    "area_by_m2": 70,
+    "width_of_facade": 7,
+    "width_of_road": 6,
+    "is_legal": 0,
+    "price": 2.67
+  },
+  {
+    "id": 4,
+    "region": "B\u1ea3o L\u00e2m",
+    "area_by_m2": 114,
+    "width_of_facade": 9,
+    "width_of_road": 7,
+    "is_legal": 0,
+    "price": 1.77
+  },
+  {
+    "id": 18,
+    "region": "B\u1ea3o L\u00e2m",
+    "area_by_m2": 76,
+    "width_of_facade": 7,
+    "width_of_road": 6,
+    "is_legal": 1,
+    "price": 2.14
+  },
+  {
+    "id": 25,
+    "region": "B\u1ea3o L\u00e2m",
+    "area_by_m2": 116,
+    "width_of_facade": 9,
+    "width_of_road": 9,
+    "is_legal": 0,
+    "price": 4.95
+  },
+  {
+    "id": 29,
+    "region": "B\u1ea3o L\u00e2m",
+    "area_by_m2": 138,
+    "width_of_facade": 10,
+    "width_of_road": 10,
+    "is_legal": 0,
+    "price": 4.78
+  }
+]
