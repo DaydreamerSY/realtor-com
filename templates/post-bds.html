@@ -1,0 +1,302 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+          integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link rel="stylesheet" href="../styles/styles.css" type="text/css"/>
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+            integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+            crossorigin="anonymous"></script>
+    <script src="../scripts/scripts.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.7.2/Chart.js"></script>
+    <title>Post</title>
+</head>
+<body>
+
+<!-- Header session -->
+<div class="top-bar w-100 mb-3">
+
+    <nav class="navbar navbar-expand-lg navbar-light bg-light border-bottom border-dark">
+        <div class="container">
+
+            <div class="d-flex justify-content-between w-100">
+
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                        data-bs-target="#navbarMainFunct" aria-controls="navbarMainFunct" aria-expanded="false"
+                        aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+
+                <a class="navbar-brand" href="#">Realtors_icon</a>
+
+                <div class="collapse navbar-collapse" id="navbarMainFunct">
+                    <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                        <!--                        Buy session-->
+                        <li class="nav-item">
+                            <a class="nav-link hover-underline-animation" href="#" id="navbarDropdown"
+                               role="button"
+                               data-bs-toggle="dropdown" aria-expanded="false">
+                                Buy
+                            </a>
+                            <ul class="dropdown-menu w-100" aria-labelledby="navbarDropdown">
+                                <div class="container">
+                                    <div class="row">
+                                        <div class="col">
+                                            <li><a class="dropdown-item">Buy homepage</a></li>
+                                        </div>
+                                        <div class="col">
+                                            <li><h5 class="dropdown-header fs-6 fw-bolder fs-6 fw-bolder">Homes for
+                                                Sale</h5></li>
+                                            <li><a class="dropdown-item" href="#">BaoLoc Homes For Sale</a></li>
+                                            <li><a class="dropdown-item" href="#">BaoLoc New Home Communities</a></li>
+                                            <li><a class="dropdown-item" href="#">BaoLoc New Construction and Plans</a>
+                                            </li>
+                                            <li><a class="dropdown-item" href="#">BaoLoc Foreclosures</a></li>
+                                            <li><a class="dropdown-item" href="#">BaoLoc Open Houses</a></li>
+                                        </div>
+                                        <div class="col">
+                                            <li><h5 class="dropdown-header fs-6 fw-bolder">Homes Values</h5></li>
+                                            <li><a class="dropdown-item" href="#">BaoLoc Housing Market</a></li>
+                                            <li><a class="dropdown-item" href="#">BaoLoc Recently Sold</a></li>
+                                            <li><a class="dropdown-item" href="#">BaoLoc Property Records</a></li>
+                                            <li>
+                                                <hr class="dropdown-divider">
+                                            </li>
+                                            <li><a class="dropdown-item" href="#">Home Buying Tips</a></li>
+                                            <li><a class="dropdown-item" href="#">Home Selling Tips</a></li>
+                                        </div>
+                                        <div class="col">
+                                            <li><a class="dropdown-item" href="#">My Home</a></li>
+                                            <li><a class="dropdown-item" href="#">News & Insights</a></li>
+                                            <li>
+                                                <hr class="dropdown-divider">
+                                            </li>
+                                            <li><a class="dropdown-item" href="#">Something else here</a></li>
+                                        </div>
+                                    </div>
+                                </div>
+                            </ul>
+                        </li>
+
+                        <li class="nav-item">
+                            <a class="nav-link hover-underline-animation" styeles="color: white" href="#">Sell</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link hover-underline-animation" href="#">Rent</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link hover-underline-animation" href="#">Mortgage</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link hover-underline-animation text-nowrap" href="#">Find Realtors</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link hover-underline-animation text-nowrap" href="#">My home</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link hover-underline-animation text-nowrap" href="#">News & Insights</a>
+                        </li>
+
+                        <!--                        Adverise session-->
+                        <div class="flex-row-reverse h-100">
+                            <button class="btn btn-outline-secondary btn-sm me-5 text-nowrap" href="#">Adervise</button>
+                        </div>
+                    </ul>
+                </div>
+
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                        data-bs-target="#navbarLogin" aria-controls="navbarLogin" aria-expanded="false"
+                        aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+
+                <div class="collapse navbar-collapse flex-row-reverse" id="navbarLogin">
+
+                    <!--                Login session-->
+                    <div class="dropdown p-1 hover-underline-animation text-center">
+                        <div role="button"
+                             id="dropdownMenuLink_2"
+                             data-bs-toggle="dropdown" aria-expanded="false">
+                            <img src="https://img.icons8.com/ios/25/000000/user-male-circle.png"/>
+                        </div>
+
+                        <ul class="dropdown-menu" aria-labelledby="dropdownMenuLink_2">
+                            <li><a class="dropdown-item" href="#">Action</a></li>
+                            <li><a class="dropdown-item" href="#">Another action</a></li>
+                            <li><a class="dropdown-item" href="#">Something else here</a></li>
+                        </ul>
+                    </div>
+
+                    <!--                Favorite session-->
+                    <div class="dropdown me-2 p-1 hover-underline-animation text-center">
+                        <div class="w-100" href="#" role="button" id="dropdownMenuLink"
+                             data-bs-toggle="dropdown" aria-expanded="false">
+                            <img class="mx-auto" src="https://img.icons8.com/windows/25/000000/like--v1.png"/>
+                        </div>
+
+                        <ul class="dropdown-menu" aria-labelledby="dropdownMenuLink">
+                            <li><a class="dropdown-item" href="#">Action</a></li>
+                            <li><a class="dropdown-item" href="#">Another action</a></li>
+                            <li><a class="dropdown-item" href="#">Something else here</a></li>
+                        </ul>
+                    </div>
+
+
+                </div>
+            </div>
+
+        </div>
+    </nav>
+
+</div>
+<!--Header session end-->
+
+
+
+<!--body form session-->
+<div class="container">
+    <div class="row">
+        <div class="col-lg-8">
+            <form method="post">
+                <div class="mb-3">
+                    <label for="formFileMultiple" class="form-label">Chọn ảnh</label>
+                    <input class="form-control" type="file" id="formFileMultiple" multiple/>
+                </div>
+                <div class="mb-3">
+                    <label for="titlePost" class="form-label">Tiêu đề</label>
+                    <input type="text" class="form-control" id="titlePost" aria-describedby=" ">
+                </div>
+                <div class="mb-3">
+                    <label for="bdsDetail" class="form-label">Mô tả ngắn</label>
+                    <div class="form-floating">
+                        <textarea class="form-control" placeholder="Leave a comment here" id="bdsDetail"
+                                  style="height: 100px"></textarea>
+                        <label for="bdsDetail">Mô tả</label>
+                    </div>
+                </div>
+                <div class="mb-3">
+                    <div class="row mb-3">
+                        <div class="col-lg-6">
+                            <div class="input-group flex-nowrap">
+                                <span class="input-group-text">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="16"
+                                         height="16" fill="currentColor"
+                                         class="bi bi-aspect-ratio" viewBox="0 0 16 16">
+                                        <path d="M0 3.5A1.5 1.5 0 0 1 1.5 2h13A1.5 1.5 0 0 1 16 3.5v9a1.5 1.5 0 0 1-1.5 1.5h-13A1.5 1.5 0 0 1 0 12.5v-9zM1.5 3a.5.5 0 0 0-.5.5v9a.5.5 0 0 0 .5.5h13a.5.5 0 0 0 .5-.5v-9a.5.5 0 0 0-.5-.5h-13z"/>
+                                        <path d="M2 4.5a.5.5 0 0 1 .5-.5h3a.5.5 0 0 1 0 1H3v2.5a.5.5 0 0 1-1 0v-3zm12 7a.5.5 0 0 1-.5.5h-3a.5.5 0 0 1 0-1H13V8.5a.5.5 0 0 1 1 0v3z"/>
+                                    </svg></span>
+                                <input type="text" class="form-control" placeholder="Diện tích" aria-label="Username"
+                                       aria-describedby="addon-wrapping">
+                                <span class="input-group-text">m<sup>2</sup></span>
+                            </div>
+                        </div>
+                        <div class="col-lg-6">
+                            <div class="input-group flex-nowrap">
+                                <span class="input-group-text">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                                         class="bi bi-cash" viewBox="0 0 16 16">
+                                        <path d="M8 10a2 2 0 1 0 0-4 2 2 0 0 0 0 4z"/>
+                                        <path d="M0 4a1 1 0 0 1 1-1h14a1 1 0 0 1 1 1v8a1 1 0 0 1-1 1H1a1 1 0 0 1-1-1V4zm3 0a2 2 0 0 1-2 2v4a2 2 0 0 1 2 2h10a2 2 0 0 1 2-2V6a2 2 0 0 1-2-2H3z"/>
+                                    </svg>
+                                </span>
+                                <input type="text" class="form-control" placeholder="Giá" aria-label="Username"
+                                       aria-describedby="addon-wrapping">
+                                <span class="input-group-text">vnđ</span>
+                            </div>
+                            <div id="cashHelp" class="form-text">convert number to clean view.</div>
+                        </div>
+                    </div>
+                    <div class="row mb-3">
+                        <div class="col-lg-6">
+                            <div class="input-group flex-nowrap">
+                                <span class="input-group-text">
+                                    <div class="icon col-1 text-center">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                                         class="bi bi-house-door" viewBox="0 0 16 16">
+                                        <path d="M8.354 1.146a.5.5 0 0 0-.708 0l-6 6A.5.5 0 0 0 1.5 7.5v7a.5.5 0 0 0 .5.5h4.5a.5.5 0 0 0 .5-.5v-4h2v4a.5.5 0 0 0 .5.5H14a.5.5 0 0 0 .5-.5v-7a.5.5 0 0 0-.146-.354L13 5.793V2.5a.5.5 0 0 0-.5-.5h-1a.5.5 0 0 0-.5.5v1.293L8.354 1.146zM2.5 14V7.707l5.5-5.5 5.5 5.5V14H10v-4a.5.5 0 0 0-.5-.5h-3a.5.5 0 0 0-.5.5v4H2.5z"/>
+                                    </svg>
+                                </div>
+                                </span>
+                                <input type="text" class="form-control" placeholder="Mặt tiền" aria-label="Username"
+                                       aria-describedby="addon-wrapping">
+                                <span class="input-group-text">m<sup>2</sup></span>
+                            </div>
+                        </div>
+                        <div class="col-lg-6">
+                            <div class="input-group flex-nowrap">
+                                <span class="input-group-text">
+                                    <svg width="16px" height="16px" viewBox="0 0 48 48" version="1.1"
+                                         xmlns="http://www.w3.org/2000/svg">
+                                        <g id="road" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd"
+                                           stroke-linecap="round" stroke-linejoin="round">
+                                            <rect width="48" height="48" fill="white" fill-opacity="0.01"/>
+                                            <g id="编组" transform="translate(6.000000, 5.091863)" stroke="#000000"
+                                               stroke-width="4">
+                                                <path d="M5,0.908136641 L0,36.9081366" id="路径-9"></path>
+                                                <path d="M36.9287415,0.908136641 L31.9643708,36.8633744" id="路径-9"
+                                                      transform="translate(33.964371, 18.886476) scale(-1, 1) translate(-33.964371, -18.886476) "></path>
+                                                <path d="M18,0.908136641 L18,6.90813664" id="路径-10"></path>
+                                                <path d="M18,29.9081366 L18,36.9081366" id="路径-10"></path>
+                                                <path d="M18,14.9081366 L18,21.9081366" id="路径-10"></path>
+                                            </g>
+                                        </g>
+                                    </svg>
+                                </span>
+                                <input type="text" class="form-control" placeholder="Đường vào" aria-label="Username"
+                                       aria-describedby="addon-wrapping">
+                                <span class="input-group-text">m<sup>2</sup></span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row mb-3">
+                        <div class="col-lg-6">
+                            <div class="input-group flex-nowrap">
+                                <span class="input-group-text">
+                                    <div class="icon col-1 text-center">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                                         class="bi bi-compass" viewBox="0 0 16 16">
+                                        <path d="M8 16.016a7.5 7.5 0 0 0 1.962-14.74A1 1 0 0 0 9 0H7a1 1 0 0 0-.962 1.276A7.5 7.5 0 0 0 8 16.016zm6.5-7.5a6.5 6.5 0 1 1-13 0 6.5 6.5 0 0 1 13 0z"/>
+                                        <path d="m6.94 7.44 4.95-2.83-2.83 4.95-4.949 2.83 2.828-4.95z"/>
+                                    </svg>
+                                </div>
+                                </span>
+                                <input type="text" class="form-control" placeholder="Mặt tiền" aria-label="Username"
+                                       aria-describedby="addon-wrapping">
+                                <span class="input-group-text">m<sup>2</sup></span>
+                            </div>
+                        </div>
+                        <div class="col-lg-6">
+                            <div class="input-group flex-nowrap">
+                                <span class="input-group-text">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                                         class="bi bi-file-earmark-check" viewBox="0 0 16 16">
+                                        <path d="M10.854 7.854a.5.5 0 0 0-.708-.708L7.5 9.793 6.354 8.646a.5.5 0 1 0-.708.708l1.5 1.5a.5.5 0 0 0 .708 0l3-3z"/>
+                                        <path d="M14 14V4.5L9.5 0H4a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h8a2 2 0 0 0 2-2zM9.5 3A1.5 1.5 0 0 0 11 4.5h2V14a1 1 0 0 1-1 1H4a1 1 0 0 1-1-1V2a1 1 0 0 1 1-1h5.5v2z"/>
+                                    </svg>
+                                </span>
+                                <select class="form-select" aria-label="Chọn loại giấy tờ">
+                                    <option selected>Chọn loại giấy tờ</option>
+                                    <option value="1">Sổ đỏ/hồng</option>
+                                    <option value="2">Giấy tờ tay</option>
+                                </select>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="mb-3 form-check">
+                    <input type="checkbox" class="form-check-input" id="exampleCheck1">
+                    <label class="form-check-label" for="exampleCheck1">Check me out</label>
+                </div>
+                <button type="submit" class="btn btn-primary w-100">Đăng bài</button>
+            </form>
+        </div>
+    </div>
+</div>
+<!--body form session end-->
+
+</body>
+</html>

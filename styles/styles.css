@@ -180,3 +180,9 @@ html, body {
 }
 
 /*Admin session end*/
+
+/*Login session*/
+.login-body {
+    background-color: #f8e3fa;
+}
+/*Login session end*/
